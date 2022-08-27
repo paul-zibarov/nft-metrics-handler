@@ -9,10 +9,8 @@ const app = express();
 const server = http.createServer(app);
 const socket = new Server(server);
 
-server.listen(3000, async () => {
-    await handleTransferEvent(socket);
-
-    socket.on('connection', () => {
-        console.log("client connected")
+server.listen(3000, () => {
+    socket.on('connection', async () => {
+        await handleTransferEvent(socket);
     });
 });
