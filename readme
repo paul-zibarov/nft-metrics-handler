@@ -9,6 +9,6 @@ For adding new event handlers:
 1. Add ABI of the smart contract to ./abi
 2. Create smart contract instance in handler.ts.
 3. Create handler function for specific event.
-4. Pass handler function to index.ts socket connection fallback
+4. Pass handler function to index.ts socket connection callback
 5. Add db model in nft-metrics-receiver for storing events data
 6. Add socket.on function to index.ts of nft-metrics-receiver
